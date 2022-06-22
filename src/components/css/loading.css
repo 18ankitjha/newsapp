@@ -1,0 +1,45 @@
+.loading-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: transparent;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.loading-bar--active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 5px;
+  background-color: #e61616;
+  -webkit-box-shadow: 10px 0 30px 15px #fe0101, -10px 0 30px 15px #eb0b0b;
+          box-shadow: 10px 0 30px 15px #de0b0b, -10px 0 30px 15px #fa1919;
+  -webkit-animation: moveLoadBar 1s cubic-bezier(0.09, 0.89, 0.7, 0.71);
+          animation: moveLoadBar 1s cubic-bezier(0.09, 0.89, 0.7, 0.71);
+}
+
+@-webkit-keyframes moveLoadBar {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes moveLoadBar {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 0%;
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=loading.css.map */
