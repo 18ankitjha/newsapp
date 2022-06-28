@@ -16,7 +16,7 @@ const News = (props) => {
         document.title = `AJ | ${props.category[0].toUpperCase()}${props.category.substring(1)}`;
         // setPage(page+1)
         const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apikey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`
-        console.log(url);
+       
       
         setloading(true);
         let data = await fetch(url);
@@ -43,7 +43,7 @@ const News = (props) => {
         
         const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apikey=${props.apiKey}&page=${page+1}&pageSize=${props.pageSize}`
         setPage(page+1)
-        console.log(url);
+        // console.log(url);
         
         let data = await fetch(url);
         let parsedData = await data.json();
